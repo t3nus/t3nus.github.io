@@ -40,7 +40,7 @@ function loadg() {
 }
  function deleteFromLocalStorage() {
             // Replace 'keyName' with the actual key you want to delete
-            localStorage.removeItem('keyName');
+            localStorage.removeItem(document.getElementById("title").value;
             document.getElementById("text").value = "Deleted!";
             setTimeout(function () {document.getElementById("text").value = ""},2000);
         }   
