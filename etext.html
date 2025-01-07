@@ -38,6 +38,12 @@ function loadg() {
         document.getElementById("text").value = text;
     }
 }
+ function deleteFromLocalStorage() {
+            // Replace 'keyName' with the actual key you want to delete
+            localStorage.removeItem('keyName');
+            document.getElementById("text").value = "Deleted!";
+            setTimeout(function () {document.getElementById("text").value = ""},2000);
+        }   
 </script>
 </head>
 <body>
@@ -50,6 +56,8 @@ function loadg() {
 <button onclick="load()">Load note</button>
     <br>
     <button onclick="loadg()">Load temporary note</button>
+<br>
+    <button onclick="deleteFromLocalStorage()">Delete Item</button>
 <br>
 <br>
 Text here:
