@@ -23,6 +23,7 @@ function load() {
     if (text == null || text == "undefined" || text == undefined) {
         document.getElementById("text").value = "Note does not exist!";
         console.log(title.value + " Does not exist")
+        setTimeout(function () {document.getElementById("text").value = ""},500);
     } else {
         document.getElementById("text").value = text;
         console.log("Exists");
@@ -34,6 +35,7 @@ function loadg() {
     var text = sessionStorage.getItem(title);
     if (text == null || text == "undefined" || text == undefined) {
         document.getElementById("text").value = "Note does not exist!";
+        setTimeout(function () {document.getElementById("text").value = ""},500);
     } else {
         document.getElementById("text").value = text;
     }
@@ -42,7 +44,7 @@ function loadg() {
             // Replace 'keyName' with the actual key you want to delete
             localStorage.removeItem(document.getElementById("title").value;
             document.getElementById("text").value = "Deleted!";
-            setTimeout(function () {document.getElementById("text").value = ""},2000);
+            setTimeout(function () {document.getElementById("text").value = ""},500);
         }   
 </script>
 </head>
